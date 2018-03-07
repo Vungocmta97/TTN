@@ -62,6 +62,68 @@ namespace QLBH.View
             txtMaHang.Select();
         }
 
+        private void txtKhachHang_TextChanged(object sender, EventArgs e)
+        {
+            dgvKhachHang.Visible = true;
+            string str = string.Format("MaKH like '%{0}%' or TenKH like '%{1}%' or SDT like '%{2}%'  ", txtKhachHang.Text, txtKhachHang.Text, txtKhachHang.Text);
+            dtKH.DefaultView.RowFilter = str;
+        }
+
+        private void txtKhachHang_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Escape)
+            {
+                dgvKhachHang.Visible = false;
+                txtKhachHang.Clear();
+            }
+            if (dgvKhachHang.Visible == true)
+            {
+                if (e.KeyData == Keys.Enter)
+                {
+                    if (dgvKhachHang.Rows.Count > 0)
+                    {
+                        txtKhachHang.Text = dgvKhachHang.SelectedRows[0].Cells[1].Value.ToString();
+                        dgvKhachHang.Visible = false;
+                    }
+                    else
+                    {
+                        dgvKhachHang.Visible = false;
+                        txtKhachHang.Clear();
+                    }
+                }
+            }
+
+        }
+
+        private void txtKhachHang_Leave(object sender, EventArgs e)
+        {
+            dgvKhachHang.Select();
+        }
+
+        private void dgvKhachHang_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtKhachHang.Text = dgvKhachHang.SelectedRows[0].Cells[1].Value.ToString();
+            dgvKhachHang.Visible = false;
+        }
+
+        private void dgvKhachHang_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvKhachHang_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (dgvKhachHang.Rows.Count > 0)
+            {
+                if (e.KeyData == Keys.Enter)
+                {
+                    txtKhachHang.Text = dgvKhachHang.SelectedRows[0].Cells[1].Value.ToString();
+                    dgvKhachHang.Visible = false;
+                }
+            }
+
+        }
+
 
     }
 }
