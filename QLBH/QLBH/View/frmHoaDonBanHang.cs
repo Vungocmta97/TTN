@@ -125,5 +125,104 @@ namespace QLBH.View
         }
 
 
+        private void dgvKhachHang_Leave(object sender, EventArgs e)
+        {
+            dgvKhachHang.Visible = false;
+        }
+
+        private void btnTroVe_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void txtMaHang_TextChanged(object sender, EventArgs e)
+        {
+            string str = string.Format("MaSP like '%{0}%' or TenSP like '%{1}%'", txtMaHang.Text, txtMaHang.Text);
+            dtHang.DefaultView.RowFilter = str;
+        }
+
+        private void btnThemMoi_Click(object sender, EventArgs e)
+        {
+            frmHoaDonBanHang_Load(sender, e);
+        }
+
+        private void dgvDSHH_DoubleClick(object sender, EventArgs e)
+        {
+            if (dgvDSHH.Rows.Count > 0)
+            {
+                txtMaHang.Text = dgvDSHH.SelectedRows[0].Cells[0].Value.ToString().Trim();
+                txtDonGia.Text = string.Format("{0:0,0}", float.Parse(dgvDSHH.SelectedRows[0].Cells[3].Value.ToString().Trim()));
+                txtSoLuong.Select();
+            }
+            else
+            {
+                MessageBox.Show("Không tồn tại hàng " + txtMaHang.Text + " .", "Thông báo");
+            }
+        }
+
+        private void txtMaHang_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                dgvDSHH_DoubleClick(sender, e);
+            }
+        }
+
+        private void txtSoLuong_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                btnDuaXuong_Click(sender, e);
+            }
+        }
+
+        private void dgvDSHH_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                txtMaHang.Text = dgvDSHH.SelectedRows[0].Cells[0].Value.ToString().Trim();
+                txtDonGia.Text = dgvDSHH.SelectedRows[0].Cells[3].Value.ToString().Trim();
+                txtSoLuong.Select();
+            }
+        }
+
+        private void txtDonGia_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                btnDuaXuong_Click(sender, e);
+            }
+        }
+
+        private void txtDonGia_Leave(object sender, EventArgs e)
+        {
+            if (txtDonGia.Text != "")
+            {
+                try
+                {
+                    float f = float.Parse(txtDonGia.Text.Trim()) * 1;
+
+                }
+                catch
+                {
+                    MessageBox.Show("Đơn giá không hợp lệ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtDonGia.Text = dgvDSHH.SelectedRows[0].Cells[3].Value.ToString().Trim();
+                    txtDonGia.Select();
+                }
+            }
+        }
+
+        private void txtMaHang_Leave(object sender, EventArgs e)
+        {
+            if (dgvDSHH.Rows.Count == 0)
+            {
+                MessageBox.Show("Không tồn tại giá trị hàng " + txtMaHang.Text + " .", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtMaHang.Clear();
+                txtMaHang.Select();
+            }
+        }
+
+
+
     }
 }
