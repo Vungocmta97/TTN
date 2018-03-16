@@ -223,6 +223,115 @@ namespace QLBH.View
         }
 
 
+        private void btnDuaXuong_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                btnLuu.Enabled = true;
+                btnXoa.Enabled = true;
+                btnSua.Enabled = true;
+                if ((txtSoLuong.Text == "" || txtSoLuong.Text == null) || (txtDonGia.Text == "" || txtDonGia.Text == null))
+                {
+                    MessageBox.Show("Số lượng và đơn giá không được để trống.", "Thông báo");
+                    txtSoLuong.Select();
+                    return;
+                }
+
+                float tongtien = 0;
+                int soluong = int.Parse(txtSoLuong.Text.Trim());
+                if (dgvDSHH.Rows.Count == 0)
+                {
+                    MessageBox.Show("Không tồn tại giá trị hàng " + txtMaHang.Text + " .", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    //coppy 2 datagridview
+                    if (dgvMain.Rows.Count == 0)
+                    {
+                        int n = dgvMain.Rows.Add();
+                        if (txtDonGia.Text == "" || txtDonGia.Text == null)
+                        {
+                            dgvMain.Rows[n].Cells[3].Value = string.Format("{0:0,0}", dgvDSHH.SelectedRows[0].Cells[3].Value);
+                        }
+                        else
+                        {
+
+                            dgvMain.Rows[n].Cells[3].Value = string.Format("{0:0,0}", float.Parse(txtDonGia.Text.Trim()));
+                        }
+                        dgvMain.Rows[n].Cells[0].Value = dgvDSHH.SelectedRows[0].Cells[0].Value;
+                        dgvMain.Rows[n].Cells[1].Value = dgvDSHH.SelectedRows[0].Cells[1].Value;
+                        dgvMain.Rows[n].Cells[2].Value = txtSoLuong.Text;
+                        dgvMain.Rows[n].Cells[4].Value = string.Format("{0:0,0}", float.Parse(dgvMain.Rows[n].Cells[3].Value.ToString()) * soluong);
+                    }
+                    else
+                    {
+                        int check = 0, save = 0;
+                        for (int i = 0; i < dgvMain.Rows.Count; i++)
+                        {
+                            if (dgvDSHH.SelectedRows[0].Cells[0].Value.ToString() == dgvMain.Rows[i].Cells[0].Value.ToString())
+                            {
+                                save = i;
+                                check++;
+                            }
+                        }
+                        if (check != 0)     //them moi bi trung
+                        {
+                            if (txtDonGia.Text == "" || txtDonGia.Text == null)
+                            {
+                                dgvMain.Rows[save].Cells[3].Value = string.Format("{0:0,0}", dgvDSHH.SelectedRows[0].Cells[3].Value);
+                            }
+                            else
+                            {
+
+                                dgvMain.Rows[save].Cells[3].Value = string.Format("{0:0,0}", float.Parse(txtDonGia.Text.Trim()));
+                            }
+                            dgvMain.Rows[save].Cells[2].Value = soluong + int.Parse(dgvMain.Rows[save].Cells[2].Value.ToString());
+                            dgvMain.Rows[save].Cells[4].Value = string.Format("{0:0,0}", float.Parse(dgvMain.Rows[save].Cells[3].Value.ToString()) * float.Parse(dgvMain.Rows[save].Cells[2].Value.ToString()));
+                            //dgvMain.Rows[save].Cells[6].Value = (float.Parse(dgvDSHH.SelectedRows[0].Cells[4].Value.ToString()) * float.Parse(dgvMain.Rows[save].Cells[3].Value.ToString())).ToString();
+                            //dgvMain.Rows[save].Cells[7].Value = (float.Parse(dgvDSHH.SelectedRows[0].Cells[3].Value.ToString()) * float.Parse(dgvMain.Rows[save].Cells[3].Value.ToString())).ToString();
+                        }
+                        else            //them moi 1 hang
+                        {
+                            int n = dgvMain.Rows.Add();
+                            if (txtDonGia.Text == "" || txtDonGia.Text == null)
+                            {
+                                dgvMain.Rows[n].Cells[3].Value = string.Format("{0:0,0}", dgvDSHH.SelectedRows[0].Cells[3].Value);
+                            }
+                            else
+                            {
+
+                                dgvMain.Rows[n].Cells[3].Value = string.Format("{0:0,0}", float.Parse(txtDonGia.Text.Trim()));
+                            }
+                            dgvMain.Rows[n].Cells[0].Value = dgvDSHH.SelectedRows[0].Cells[0].Value;
+                            dgvMain.Rows[n].Cells[1].Value = dgvDSHH.SelectedRows[0].Cells[1].Value;
+                            dgvMain.Rows[n].Cells[2].Value = txtSoLuong.Text;
+                            dgvMain.Rows[n].Cells[4].Value = string.Format("{0:0,0}", float.Parse(dgvMain.Rows[n].Cells[3].Value.ToString()) * soluong);
+                            //dgvMain.Rows[n].Cells[6].Value = (float.Parse(dgvDSHH.SelectedRows[0].Cells[4].Value.ToString()) * soluong).ToString();
+                            //dgvMain.Rows[n].Cells[7].Value = (float.Parse(dgvDSHH.SelectedRows[0].Cells[3].Value.ToString()) * soluong).ToString();
+                        }
+                    }
+
+                }
+
+
+                for (int k = 0; k < dgvMain.Rows.Count; k++)
+                {
+                    tongtien += float.Parse(dgvMain.Rows[k].Cells[4].Value.ToString());
+                }
+                lblTongTien.Text = string.Format("{0:0,0}", tongtien);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            txtSoLuong.Text = "1";
+            txtMaHang.Clear();
+            txtDonGia.Clear();
+            txtMaHang.Select();
+        }
+
+
 
     }
 }
