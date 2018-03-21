@@ -332,6 +332,95 @@ namespace QLBH.View
         }
 
 
+        private void txtSoLuong_KeyDown_1(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                btnDuaXuong_Click(sender, e);
+            }
+        }
+
+        private void txtSoLuong_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                int i = int.Parse(txtSoLuong.Text.Trim()) * 1;
+
+            }
+            catch
+            {
+                MessageBox.Show("Số lượng không hợp lệ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtSoLuong.Text = "1";
+                txtSoLuong.Select();
+            }
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (dgvMain.Rows.Count != 0)
+            {
+                dgvMain.Rows.Remove(dgvMain.SelectedRows[0]);
+                float tongtien = 0;
+                for (int k = 0; k < dgvMain.Rows.Count; k++)
+                {
+                    tongtien += float.Parse(dgvMain.Rows[k].Cells[4].Value.ToString());
+                }
+                lblTongTien.Text = string.Format("{0:0,0}", tongtien);
+            }
+            if (dgvMain.Rows.Count == 0)
+            {
+                btnXoa.Enabled = false;
+                btnLuu.Enabled = false;
+                btnSua.Enabled = false;
+            }
+            txtMaHang.Select();
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            btnXoa.Enabled = false;
+            btnLuu.Enabled = false;
+            btnSua.Enabled = false;
+            txtMaHang.Text = dgvMain.SelectedRows[0].Cells[0].Value.ToString().Trim();
+            txtDonGia.Text = dgvMain.SelectedRows[0].Cells[3].Value.ToString().Trim();
+            txtSoLuong.Text = dgvMain.SelectedRows[0].Cells[2].Value.ToString().Trim();
+            dgvMain.Rows.Remove(dgvMain.SelectedRows[0]);
+            txtSoLuong.Select();
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+
+            string khachQuery = "";
+            string khachValue = "";
+            if (dgvKhachHang.Rows.Count != 1)
+            {
+                khachQuery = "";
+                khachValue = "";
+            }
+            else
+            {
+                khachValue = ", '" + dgvKhachHang.Rows[0].Cells[0].Value.ToString() + "'";
+                khachQuery = ", MaKH ";
+            }
+
+            if (hoadon.ThucHienLenh("insert into hoadonbanhang(MaHDB, NgayLap, TongTien, MaNV " + khachQuery + ") values ('" + txtHoaDon.Text.Trim() + "','" + DateTime.Today.Date + "'," + float.Parse(lblTongTien.Text) + " ,'" + cmbNhanVien.SelectedValue.ToString().Trim() + "' " + khachValue + ") "))
+            {
+                for (int i = 0; i < dgvMain.Rows.Count; i++)
+                {
+                    hoadon.ThucHienLenh("insert into ChiTietBanHang values ('" + dgvMain.Rows[i].Cells[0].Value.ToString().Trim() + "', '" + txtHoaDon.Text.Trim() + "', " + int.Parse(dgvMain.Rows[i].Cells[2].Value.ToString()) + ", " + float.Parse(dgvMain.Rows[i].Cells[3].Value.ToString()) + ", " + float.Parse(dgvMain.Rows[i].Cells[4].Value.ToString()) + ")");
+                    hoadon.ThucHienLenh("update SanPham set SoLuong = SoLuong - " + int.Parse(dgvMain.Rows[i].Cells[2].Value.ToString()) + " where MaSP = '" + int.Parse(dgvMain.Rows[i].Cells[0].Value.ToString()) + "'");
+                }
+                MessageBox.Show("Thêm hóa đơn thành công.", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                dgvMain.Rows.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Thêm thât bại.", "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+            frmHoaDonBanHang_Load(sender, e);
+        }
+
 
     }
 }
