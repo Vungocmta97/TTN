@@ -13,6 +13,12 @@ namespace QLBH.View
 {
     public partial class frmThongKeNhapHang : Form
     {
+        DataTable dtNhap = new DataTable();
+        DataTable dtCT = new DataTable();
+        HoangCtrl tke = new HoangCtrl();
+        private int slcu;
+        private DateTime tungay, denngay;
+
 
         public frmThongKeNhapHang()
         {
