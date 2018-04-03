@@ -114,6 +114,87 @@ namespace QLBH.View
         }
 
 
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            if (dtNhap.Rows.Count > 0)
+            {
+                string str = string.Format("MaHDN like '%{0}%'", txtTimKiem.Text);
+                dtNhap.DefaultView.RowFilter = str;
+            }
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+
+            btnSua.Enabled = true;
+            btnXoa.Enabled = true;
+            btnXoaCT.Enabled = true;
+            btnHuy.Enabled = false;
+            btnLuu.Enabled = false;
+            dgvChiTiet.Enabled = true;
+            dgvPhieuNhap.Enabled = true;
+            nudSoLuong.Enabled = false;
+            nudDonGia.Enabled = false;
+            dtCT = tke.GetData("select SanPham.MaSP, TenSP, ChiTietNhapHang.SoLuong, ChiTietNhapHang.GiaNhap, ThanhTien from SanPham, ChiTietNhapHang where SanPham.MaSP = ChiTietNhapHang.MaSP and MaHDN = '" + txtMaPhieu.Text.Trim() + "'");
+            dgvChiTiet.DataSource = dtCT;
+            txtMaPhieu.Clear();
+            btnTimKiem_Click(sender, e);
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Xóa phiếu nhập " + txtMaPhieu.Text.Trim() + " ?", "Xác nhận", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                for (int i = 0; i < dgvChiTiet.Rows.Count; i++)
+                {
+                    tke.ThucHienLenh("update SanPham set SoLuong = SoLuong - '" + dgvChiTiet.Rows[i].Cells[2].Value.ToString() + "' where MaSP = '" + dgvChiTiet.Rows[i].Cells[0].Value.ToString() + "'");
+                }
+                if (tke.ThucHienLenh("delete ChiTietNhapHang where MaHDN = '" + txtMaPhieu.Text.Trim() + "'") == true)
+                {
+                    if (tke.ThucHienLenh("delete HoaDonNhapHang where MaHDN = '" + txtMaPhieu.Text.Trim() + "'") == true)
+                    {
+                        MessageBox.Show("Xóa thành công");
+                        btnTimKiem_Click(sender, e);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa thất bại");
+                    }
+                }
+
+            }
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            int slmoi = int.Parse(nudSoLuong.Value.ToString());
+            float thanhtien = float.Parse(txtThanhTien.Text);
+            txtThanhTien.Text = (float.Parse(nudDonGia.Value.ToString()) * float.Parse(nudSoLuong.Value.ToString())).ToString();
+            string s = "update ChiTietNhapHang set SoLuong =" + nudSoLuong.Value.ToString() + " , ThanhTien =" + txtThanhTien.Text + " , GiaNhap=" + nudDonGia.Value.ToString() + " where MaHDN = '" + txtMaPhieu.Text.Trim() + "' and MaSP = '" + txtMaSP.Text.Trim() + "' ";
+            if (tke.ThucHienLenh(s) == true)
+            {
+                MessageBox.Show("Sửa thành công");
+
+                tke.ThucHienLenh("update SanPham set SoLuong = SoLuong - " + slcu + " + " + slmoi + " where MaSP = '" + txtMaSP.Text.Trim() + "'");
+                txtTongTien.Text = (float.Parse(txtTongTien.Text) - thanhtien + float.Parse(txtThanhTien.Text)).ToString();
+                tke.ThucHienLenh("update HoaDonNhapHang set TongTien = " + txtTongTien.Text + " where MaHDN = '" + txtMaPhieu.Text.Trim() + "'");
+                dgvChiTiet.Enabled = true;
+                dgvPhieuNhap.Enabled = true;
+                btnHuy_Click(sender, e);
+                btnTimKiem_Click(sender, e);
+            }
+            else
+            {
+                MessageBox.Show("Thất bại ");
+            }
+        }
+
+        private void btnTroVe_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+
 
     }
 }
