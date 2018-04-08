@@ -194,6 +194,50 @@ namespace QLBH.View
             this.Close();
         }
 
+        private void btnXoaCT_Click(object sender, EventArgs e)
+        {
+            int sl = int.Parse(nudSoLuong.Value.ToString());
+            if (MessageBox.Show("Xóa sản phẩm ?", "Xác nhận", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                float thanhtien = float.Parse(txtThanhTien.Text);
+                if (tke.ThucHienLenh("delete ChiTietNhapHang where MaSP = '" + txtMaSP.Text.Trim() + "' and MaHDN = '" + txtMaPhieu.Text.Trim() + "'") == true)
+                {
+                    tke.ThucHienLenh("update SanPham set SoLuong = SoLuong - " + sl + " where MaSP = '" + txtMaSP.Text.Trim() + "'");
+                    MessageBox.Show("Xóa thành công");
+                    txtTongTien.Text = string.Format("{0:0,0}", (float.Parse(txtTongTien.Text) - thanhtien));
+                    tke.ThucHienLenh("update HoaDonNhapHang set tongtien = " + float.Parse(txtTongTien.Text) + " where MaHDN = '" + txtMaPhieu.Text.Trim() + "'");
+
+                    DataTable dttemp = new DataTable();
+                    dttemp = tke.GetData("select * from ChiTietNhapHang where MaHDN = '" + txtMaPhieu.Text.Trim() + "'");
+                    if (dttemp.Rows.Count == 0)
+                    {
+                        tke.ThucHienLenh("delete HoaDonNhapHang where MaHDN = '" + txtMaPhieu.Text.Trim() + "'");
+                    }
+                    btnHuy_Click(sender, e);
+                    btnTimKiem_Click(sender, e);
+                }
+                else
+                {
+                    MessageBox.Show("Xóa thất bại");
+                }
+            }
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            slcu = int.Parse(nudSoLuong.Value.ToString());
+            btnSua.Enabled = false;
+            btnXoa.Enabled = false;
+            btnHuy.Enabled = true;
+            btnXoaCT.Enabled = false;
+            btnLuu.Enabled = true;
+            dgvChiTiet.Enabled = false;
+            dgvPhieuNhap.Enabled = false;
+            nudSoLuong.Enabled = true;
+            nudDonGia.Enabled = true;
+            nudSoLuong.Select();
+        }
+
 
 
     }
