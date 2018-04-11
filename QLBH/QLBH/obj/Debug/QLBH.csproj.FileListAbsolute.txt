@@ -1,0 +1,78 @@
+c:\users\hoang\documents\visual studio 2015\Projects\QLBH\QLBH\bin\Debug\QLBH.exe.config
+C:\Users\Hoang\Desktop\QLBH\QLBH\QLBH\bin\Debug\QLBH.exe.config
+C:\Users\Hoang\Desktop\QLBH\QLBH\QLBH\bin\Debug\QLBH.exe
+C:\Users\Hoang\Desktop\QLBH\QLBH\QLBH\bin\Debug\QLBH.pdb
+C:\Users\Hoang\Desktop\QLBH\QLBH\QLBH\obj\Debug\QLBH.csprojResolveAssemblyReference.cache
+C:\Users\Hoang\Desktop\QLBH\QLBH\QLBH\obj\Debug\QLBH.Properties.Resources.resources
+C:\Users\Hoang\Desktop\QLBH\QLBH\QLBH\obj\Debug\QLBH.View.frmThongKeNhapHang.resources
+C:\Users\Hoang\Desktop\QLBH\QLBH\QLBH\obj\Debug\QLBH.csproj.GenerateResource.Cache
+C:\Users\Hoang\Desktop\QLBH\QLBH\QLBH\obj\Debug\QLBH.exe
+C:\Users\Hoang\Desktop\QLBH\QLBH\QLBH\obj\Debug\QLBH.pdb
+C:\Users\Hoang\Desktop\QLBH\QLBH\QLBH\obj\Debug\QLBH.View.frmThongKeBanHang.resources
+C:\Users\Hoang\Desktop\QLBH\QLBH\QLBH\obj\Debug\QLBH.View.frmHoaDonBanHang.resources
+C:\Users\Hoang\Desktop\QLBH\QLBH\QLBH\obj\Debug\QLBH.View.frmHoaDonNhapHang.resources
+C:\Users\Thinh Bui\Desktop\Quản Lí Bán Hàng\QLBH\QLBH\bin\Debug\QLBH.exe.config
+C:\Users\Thinh Bui\Desktop\Quản Lí Bán Hàng\QLBH\QLBH\bin\Debug\QLBH.exe
+C:\Users\Thinh Bui\Desktop\Quản Lí Bán Hàng\QLBH\QLBH\bin\Debug\QLBH.pdb
+C:\Users\Thinh Bui\Desktop\Quản Lí Bán Hàng\QLBH\QLBH\obj\Debug\QLBH.Properties.Resources.resources
+C:\Users\Thinh Bui\Desktop\Quản Lí Bán Hàng\QLBH\QLBH\obj\Debug\QLBH.View.frmHoaDonBanHang.resources
+C:\Users\Thinh Bui\Desktop\Quản Lí Bán Hàng\QLBH\QLBH\obj\Debug\QLBH.View.frmHoaDonNhapHang.resources
+C:\Users\Thinh Bui\Desktop\Quản Lí Bán Hàng\QLBH\QLBH\obj\Debug\QLBH.View.frmThongKeBanHang.resources
+C:\Users\Thinh Bui\Desktop\Quản Lí Bán Hàng\QLBH\QLBH\obj\Debug\QLBH.View.frmThongKeNhapHang.resources
+C:\Users\Thinh Bui\Desktop\Quản Lí Bán Hàng\QLBH\QLBH\obj\Debug\QLBH.csproj.GenerateResource.Cache
+C:\Users\Thinh Bui\Desktop\Quản Lí Bán Hàng\QLBH\QLBH\obj\Debug\QLBH.exe
+C:\Users\Thinh Bui\Desktop\Quản Lí Bán Hàng\QLBH\QLBH\obj\Debug\QLBH.pdb
+C:\Users\Thinh Bui\Desktop\Quản Lí Bán Hàng\QLBH\QLBH\obj\Debug\QLBH.View.frm_NhaCC.resources
+C:\Users\Thinh Bui\Desktop\Quản Lí Bán Hàng\QLBH\QLBH\obj\Debug\QLBH.csprojResolveAssemblyReference.cache
+C:\Users\Thinh Bui\Desktop\Quản Lí Bán Hàng\QLBH\QLBH\obj\Debug\QLBH.View.frm_KhachHang.resources
+F:\đại học năm 3\KÌ 2\Thực tập nhóm_TH13\Dự Án Nhóm\Bán Hàng\Quản Lý Bán hàng\QLBH\QLBH\bin\Debug\QLBH.exe.config
+F:\đại học năm 3\KÌ 2\Thực tập nhóm_TH13\Dự Án Nhóm\Bán Hàng\Quản Lý Bán hàng\QLBH\QLBH\bin\Debug\QLBH.exe
+F:\đại học năm 3\KÌ 2\Thực tập nhóm_TH13\Dự Án Nhóm\Bán Hàng\Quản Lý Bán hàng\QLBH\QLBH\bin\Debug\QLBH.pdb
+F:\đại học năm 3\KÌ 2\Thực tập nhóm_TH13\Dự Án Nhóm\Bán Hàng\Quản Lý Bán hàng\QLBH\QLBH\obj\Debug\QLBH.csprojResolveAssemblyReference.cache
+F:\đại học năm 3\KÌ 2\Thực tập nhóm_TH13\Dự Án Nhóm\Bán Hàng\Quản Lý Bán hàng\QLBH\QLBH\obj\Debug\QLBH.Properties.Resources.resources
+F:\đại học năm 3\KÌ 2\Thực tập nhóm_TH13\Dự Án Nhóm\Bán Hàng\Quản Lý Bán hàng\QLBH\QLBH\obj\Debug\QLBH.View.frmHoaDonBanHang.resources
+F:\đại học năm 3\KÌ 2\Thực tập nhóm_TH13\Dự Án Nhóm\Bán Hàng\Quản Lý Bán hàng\QLBH\QLBH\obj\Debug\QLBH.View.frmHoaDonNhapHang.resources
+F:\đại học năm 3\KÌ 2\Thực tập nhóm_TH13\Dự Án Nhóm\Bán Hàng\Quản Lý Bán hàng\QLBH\QLBH\obj\Debug\QLBH.View.frmSanPham.resources
+F:\đại học năm 3\KÌ 2\Thực tập nhóm_TH13\Dự Án Nhóm\Bán Hàng\Quản Lý Bán hàng\QLBH\QLBH\obj\Debug\QLBH.View.frmThongKeBanHang.resources
+F:\đại học năm 3\KÌ 2\Thực tập nhóm_TH13\Dự Án Nhóm\Bán Hàng\Quản Lý Bán hàng\QLBH\QLBH\obj\Debug\QLBH.View.frmThongKeNhapHang.resources
+F:\đại học năm 3\KÌ 2\Thực tập nhóm_TH13\Dự Án Nhóm\Bán Hàng\Quản Lý Bán hàng\QLBH\QLBH\obj\Debug\QLBH.View.frmThongKeSoLuongHang.resources
+F:\đại học năm 3\KÌ 2\Thực tập nhóm_TH13\Dự Án Nhóm\Bán Hàng\Quản Lý Bán hàng\QLBH\QLBH\obj\Debug\QLBH.View.frm_KhachHang.resources
+F:\đại học năm 3\KÌ 2\Thực tập nhóm_TH13\Dự Án Nhóm\Bán Hàng\Quản Lý Bán hàng\QLBH\QLBH\obj\Debug\QLBH.View.frm_NhaCC.resources
+F:\đại học năm 3\KÌ 2\Thực tập nhóm_TH13\Dự Án Nhóm\Bán Hàng\Quản Lý Bán hàng\QLBH\QLBH\obj\Debug\QLBH.View.frm_NhanVien.resources
+F:\đại học năm 3\KÌ 2\Thực tập nhóm_TH13\Dự Án Nhóm\Bán Hàng\Quản Lý Bán hàng\QLBH\QLBH\obj\Debug\QLBH.csproj.GenerateResource.Cache
+F:\đại học năm 3\KÌ 2\Thực tập nhóm_TH13\Dự Án Nhóm\Bán Hàng\Quản Lý Bán hàng\QLBH\QLBH\obj\Debug\QLBH.exe
+F:\đại học năm 3\KÌ 2\Thực tập nhóm_TH13\Dự Án Nhóm\Bán Hàng\Quản Lý Bán hàng\QLBH\QLBH\obj\Debug\QLBH.pdb
+E:\đại học năm 3\KÌ 2\Thực tập nhóm_TH13\Dự Án Nhóm\Bán Hàng\Quản Lý Bán hàng\QLBH\QLBH\bin\Debug\QLBH.exe.config
+E:\đại học năm 3\KÌ 2\Thực tập nhóm_TH13\Dự Án Nhóm\Bán Hàng\Quản Lý Bán hàng\QLBH\QLBH\obj\Debug\QLBH.exe
+E:\đại học năm 3\KÌ 2\Thực tập nhóm_TH13\Dự Án Nhóm\Bán Hàng\Quản Lý Bán hàng\QLBH\QLBH\obj\Debug\QLBH.pdb
+E:\đại học năm 3\KÌ 2\Thực tập nhóm_TH13\Dự Án Nhóm\Bán Hàng\Quản Lý Bán hàng\QLBH\QLBH\bin\Debug\QLBH.exe
+E:\đại học năm 3\KÌ 2\Thực tập nhóm_TH13\Dự Án Nhóm\Bán Hàng\Quản Lý Bán hàng\QLBH\QLBH\bin\Debug\QLBH.pdb
+E:\đại học năm 3\KÌ 2\Thực tập nhóm_TH13\Dự Án Nhóm\Bán Hàng\Quản Lý Bán hàng\QLBH\QLBH\obj\Debug\QLBH.csprojResolveAssemblyReference.cache
+E:\đại học năm 3\KÌ 2\Thực tập nhóm_TH13\Dự Án Nhóm\Bán Hàng\Quản Lý Bán hàng\QLBH\QLBH\obj\Debug\QLBH.Properties.Resources.resources
+E:\đại học năm 3\KÌ 2\Thực tập nhóm_TH13\Dự Án Nhóm\Bán Hàng\Quản Lý Bán hàng\QLBH\QLBH\obj\Debug\QLBH.View.frmHoaDonBanHang.resources
+E:\đại học năm 3\KÌ 2\Thực tập nhóm_TH13\Dự Án Nhóm\Bán Hàng\Quản Lý Bán hàng\QLBH\QLBH\obj\Debug\QLBH.View.frmHoaDonNhapHang.resources
+E:\đại học năm 3\KÌ 2\Thực tập nhóm_TH13\Dự Án Nhóm\Bán Hàng\Quản Lý Bán hàng\QLBH\QLBH\obj\Debug\QLBH.View.frmSanPham.resources
+E:\đại học năm 3\KÌ 2\Thực tập nhóm_TH13\Dự Án Nhóm\Bán Hàng\Quản Lý Bán hàng\QLBH\QLBH\obj\Debug\QLBH.View.frmThongKeBanHang.resources
+E:\đại học năm 3\KÌ 2\Thực tập nhóm_TH13\Dự Án Nhóm\Bán Hàng\Quản Lý Bán hàng\QLBH\QLBH\obj\Debug\QLBH.View.frmThongKeNhapHang.resources
+E:\đại học năm 3\KÌ 2\Thực tập nhóm_TH13\Dự Án Nhóm\Bán Hàng\Quản Lý Bán hàng\QLBH\QLBH\obj\Debug\QLBH.View.frmThongKeSoLuongHang.resources
+E:\đại học năm 3\KÌ 2\Thực tập nhóm_TH13\Dự Án Nhóm\Bán Hàng\Quản Lý Bán hàng\QLBH\QLBH\obj\Debug\QLBH.View.frm_KhachHang.resources
+E:\đại học năm 3\KÌ 2\Thực tập nhóm_TH13\Dự Án Nhóm\Bán Hàng\Quản Lý Bán hàng\QLBH\QLBH\obj\Debug\QLBH.View.frm_NhaCC.resources
+E:\đại học năm 3\KÌ 2\Thực tập nhóm_TH13\Dự Án Nhóm\Bán Hàng\Quản Lý Bán hàng\QLBH\QLBH\obj\Debug\QLBH.View.frm_NhanVien.resources
+E:\đại học năm 3\KÌ 2\Thực tập nhóm_TH13\Dự Án Nhóm\Bán Hàng\Quản Lý Bán hàng\QLBH\QLBH\obj\Debug\QLBH.csproj.GenerateResource.Cache
+E:\github\QLBH - Copy\QLBH\bin\Debug\QLBH.exe.config
+E:\github\QLBH - Copy\QLBH\obj\Debug\QLBH.exe
+E:\github\QLBH - Copy\QLBH\obj\Debug\QLBH.pdb
+E:\github\QLBH - Copy\QLBH\bin\Debug\QLBH.exe
+E:\github\QLBH - Copy\QLBH\bin\Debug\QLBH.pdb
+E:\github\QLBH - Copy\QLBH\obj\Debug\QLBH.csprojResolveAssemblyReference.cache
+E:\github\QLBH - Copy\QLBH\obj\Debug\QLBH.Properties.Resources.resources
+E:\github\QLBH - Copy\QLBH\obj\Debug\QLBH.View.frmHoaDonBanHang.resources
+E:\github\QLBH - Copy\QLBH\obj\Debug\QLBH.View.frmHoaDonNhapHang.resources
+E:\github\QLBH - Copy\QLBH\obj\Debug\QLBH.View.frmSanPham.resources
+E:\github\QLBH - Copy\QLBH\obj\Debug\QLBH.View.frmThongKeBanHang.resources
+E:\github\QLBH - Copy\QLBH\obj\Debug\QLBH.View.frmThongKeNhapHang.resources
+E:\github\QLBH - Copy\QLBH\obj\Debug\QLBH.View.frmThongKeSoLuongHang.resources
+E:\github\QLBH - Copy\QLBH\obj\Debug\QLBH.View.frm_KhachHang.resources
+E:\github\QLBH - Copy\QLBH\obj\Debug\QLBH.View.frm_NhaCC.resources
+E:\github\QLBH - Copy\QLBH\obj\Debug\QLBH.View.frm_NhanVien.resources
+E:\github\QLBH - Copy\QLBH\obj\Debug\QLBH.csproj.GenerateResource.Cache
