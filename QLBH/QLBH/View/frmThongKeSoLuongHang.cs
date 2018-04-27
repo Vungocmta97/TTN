@@ -13,7 +13,7 @@ namespace QLBH.View
 {
     public partial class frmThongKeSoLuongHang : Form
     {
-        public frmThongKeSoLuongHang()
+		public frmThongKeSoLuongHang()
         {
             InitializeComponent();
         }
@@ -85,5 +85,5 @@ namespace QLBH.View
         {
 
         }
-    }
+	}
 }
